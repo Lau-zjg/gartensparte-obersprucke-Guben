@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hinweise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">🌻</div>
+  <div class="title">
+    <h1>Hinweise</h1>
+    <p>wichtige Informationen für unsere Gartenanlage</p>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+   <a href="index.html">Startseite</a>
+   <a href="aktuelles.html">Aktuelles</a>
+   <a href="freie-gaerten.html">Freie Gärten</a>
+   <a href="galerie.html">Galerie</a>
+   <a href="dokumente.html">Dokumente</a>
+   <a href="hinweise.html">Hinweise</a>
+   <a href="wissenswertes.html">Wissenswertes</a>
+   <a href="kontakt.html">Kontakt</a>
+   <a href="impressum.html">Impressum</a>
+  </aside>
+
+  <main class="content">
+    <section class="welcome">
+      <h2>Hinweise</h2>
+      <p>
+        Hier finden Sie wichtige Regeln und Hinweise für ein sicheres und rücksichtsvolles Miteinander in unserer Gartenanlage.
+      </p>
+    </section>
+  
+    <section class="hint-grid">
+
+  <div class="hint-card" onclick="openHintModal('Aktuelle Hinweise', [
+    'Aktuelle Waldbrandstufe beachten.',
+    'Wasser derzeit nicht funktionsfähig.',
+    'Tor bitte immer geschlossen halten.',
+    'Innerhalb der Gartenanlage Schrittgeschwindigkeit fahren.'
+  ])">
+    <h3>Aktuelle Hinweise</h3>
+    <p>Wichtige aktuelle Informationen für alle Gartenfreunde.</p>
+  </div>
+  
+  <div class="hint-card" onclick="openHintModal('Feuer & Sicherheit', [
+    'Waldbrandstufe beachten.',
+    'Kein offenes Feuer bei erhöhter Waldbrandgefahr.',
+    'Kein Feuer in Waldnähe.',
+    'Grillen nur nach den geltenden Vereinsregeln.',
+    'Wenn möglich eine Wassertonne als Reserve bereithalten.'
+  ])">
+    <h3>Feuer & Sicherheit</h3>
+    <p>Hinweise zu Feuer, Waldbrandgefahr und Sicherheit.</p>
+  </div>
+
+  <div class="hint-card" onclick="openHintModal('Wasser & Umwelt', [
+    'Wasser sparsam verwenden.',
+    'Bei Hitze möglichst morgens oder abends gießen.',
+    'Obst, Gemüse und junge Pflanzen bevorzugt gießen.',
+    'Rasenflächen bei Trockenheit möglichst nicht dauerhaft bewässern.',
+    'Regenwasser nutzen, wenn möglich.'
+  ])">
+    <h3>Wasser & Umwelt</h3>
+    <p>Hinweise zum sparsamen Umgang mit Wasser.</p>
+  </div>
+
+  <div class="hint-card" onclick="openHintModal('Bauen im Garten', [
+    'Vor jedem Bauvorhaben ist eine Genehmigung erforderlich.',
+    'Bauliche Veränderungen dürfen nicht ohne Zustimmung des Vereins erfolgen.',
+    'Bauanträge sind vor Beginn beim Vorstand einzureichen.',
+    'Die Vereinsordnung ist zu beachten.'
+  ])">
+    <h3>Bauen im Garten</h3>
+    <p>Informationen zu Bauanträgen und Genehmigungen.</p>
+  </div>
+
+  <div class="hint-card" onclick="openHintModal('Verkehr', [
+    'In der Gartenanlage gilt Schrittgeschwindigkeit.',
+    'Das Auto sollte nur zum Be- und Entladen genutzt werden.',
+    'Das Tor ist nach dem Rein- und Rausfahren sofort wieder zu schließen.',
+    'Bitte Rücksicht auf Kinder, Fußgänger und andere Gartenfreunde nehmen.'
+  ])">
+    <h3>Verkehr</h3>
+    <p>Regeln zum Fahren und Parken in der Gartenanlage.</p>
+  </div>
+
+  <div class="hint-card" onclick="openHintModal('Miteinander', [
+    'Ruhezeiten sind zu beachten.',
+    'Bitte Rücksicht auf Nachbarn und andere Gartenfreunde nehmen.',
+    'Wege und Gemeinschaftsflächen sauber halten.',
+    'Gemeinschaftseigentum pfleglich behandeln.'
+  ])">
+    <h3>Miteinander</h3>
+    <p>Hinweise für ein rücksichtsvolles Zusammenleben.</p>
+  </div>
+
+</section>
+
+<div id="hintModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeHintModal()">&times;</span>
+
+    <h2 id="hintTitle"></h2>
+    <ul id="hintList"></ul>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><strong>Gartensparte Obersprucke e. V.</strong></p>
+    <p>Natur • Gemeinschaft • Erholung</p>
+    <p>© 2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

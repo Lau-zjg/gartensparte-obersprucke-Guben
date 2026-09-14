@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktuelles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">🌻</div>
+  <div class="title">
+    <h1>Aktuelles</h1>
+    <p>Informationen und Aushänge</p>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <a href="index.html">Startseite</a>
+    <a href="aktuelles.html">Aktuelles</a>
+    <a href="freie-gaerten.html">Freie Gärten</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="dokumente.html">Dokumente</a>
+    <a href="hinweise.html">Hinweise</a>
+    <a href="wissenswertes.html">Wissenswertes</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+  </aside>
+
+  <main class="content">
+    <section class="welcome">
+      <h2>Aktuelles</h2>
+      <p>
+        Hier finden Sie aktuelle Informationen, Termine und Bekanntmachungen
+        unserer Gartenanlage.
+      </p>
+    </section>
+
+    <section class="notice-grid">
+
+      <div class="notice-card" onclick="openNoticeModal('Sonderversammlung', 'Am Samstag findet eine Sonderversammlung im Vereinshaus statt.', 'Samstag, 28.06.2026', 'Der Vorstand')">
+        <h3>Sonderversammlung</h3>
+        <p>Samstag, 28.06.2026</p>
+        <p>Wichtige Information für alle Mitglieder.</p>
+        <button>Mehr lesen</button>
+      </div>
+
+      <div class="notice-card" onclick="openNoticeModal('Wasserversorgung', 'Der Brunnen ist derzeit leer. Wir haben momentan kein Wasser mehr. Wann es wieder Wasser gibt, ist aktuell nicht bekannt.', 'Aktueller Hinweis', 'Der Wassertrupp')">
+        <h3>Wasserversorgung</h3>
+        <p>Der Brunnen ist derzeit leer.</p>
+        <p>Weitere Informationen im Aushang.</p>
+        <button>Mehr lesen</button>
+      </div>
+
+      <div class="notice-card" onclick="openNoticeModal('Nächster Arbeitseinsatz', 'Unser nächster Arbeitseinsatz findet am 25.07.2026 ab 08:30 Uhr statt. Bitte melden Sie sich bis zum 17.07.2026 an.', '25.07.2026 · 08:30 Uhr', 'Der Gartenvorstand')">
+        <h3>Arbeitseinsatz</h3>
+        <p>25.07.2026 · 08:30 Uhr</p>
+        <p>Bitte vorher anmelden.</p>
+        <button>Mehr lesen</button>
+      </div>
+
+      <div class="notice-card" onclick="openNoticeModal('Waldbrandstufe', 'Aktuell gilt Waldbrandstufe 3. Bitte kein offenes Feuer entzünden und die Hinweise zum Brandschutz beachten.', 'Aktuell: Stufe 3', 'Der Vorstand')">
+        <h3>Waldbrandstufe</h3>
+        <p>Aktuell: Stufe 3</p>
+        <p>Bitte Brandschutzhinweise beachten.</p>
+        <button>Mehr lesen</button>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<div id="noticeModal" class="modal">
+  <div class="notice-paper">
+    <span class="close" onclick="closeNoticeModal()">&times;</span>
+
+    <div class="pin">●</div>
+
+    <h2 id="noticeTitle"></h2>
+    <p class="notice-date" id="noticeDate"></p>
+
+    <p id="noticeText"></p>
+
+    <p class="notice-signature" id="noticeSignature"></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><strong>Gartensparte Obersprucke e. V.</strong></p>
+    <p>Natur • Gemeinschaft • Erholung</p>
+    <p>© 2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freie Gärten</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">🌻</div>
+  <div class="title">
+    <h1>Freie Gärten</h1>
+    <p>Gartensparte Obersprucke e. V.</p>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <a href="index.html">Startseite</a>
+    <a href="aktuelles.html">Aktuelles</a>
+    <a href="freie-gaerten.html">Freie Gärten</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="dokumente.html">Dokumente</a>
+    <a href="hinweise.html">Hinweise</a>
+    <a href="wissenswertes.html">Wissenswertes</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+  </aside>
+
+  <main class="content">
+    <section class="welcome">
+      <h2>Aktuell freie Gärten</h2>
+      <p>
+        Hier finden Sie freie oder bald verfügbare Gärten unserer Anlage.
+        Bei Interesse können Sie sich gern über die Kontaktseite melden.
+      </p>
+    </section>
+
+    <section class="garden-grid">
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 6', 'bild1.jpg', '🟢 Frei', 'ca. 300 m²', 'vorhanden', 'vorhanden', 'auf Anfrage', 'sofort')">
+        <img src="bild1.jpg" alt="Garten Nr. 5">
+        <h3>Garten Nr. 6</h3>
+        <p>🟢 Frei</p>
+        <p class="short-facts">ca. 300 m² · Laube vorhanden</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 16', 'bild2.jpg', '🟢 Frei', 'ca. 420 m²', 'vorhanden', 'vorhanden', 'vorhanden', 'nach Absprache')">
+        <img src="bild2.jpg" alt="Garten Nr. 16">
+        <h3>Garten Nr. 16</h3>
+        <p>🟢 Frei</p>
+        <p class="short-facts">ca. 420 m² · Strom vorhanden</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 33', 'bild3.jpg', '🟡 Reserviert', 'ca. 380 m²', 'vorhanden', 'vorhanden', 'nicht vorhanden', 'voraussichtlich Sommer')">
+        <img src="bild3.jpg" alt="Garten Nr. 33">
+        <h3>Garten Nr. 33</h3>
+        <p>🟡 Reserviert</p>
+        <p class="short-facts">ca. 380 m² · Gartenhaus vorhanden</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 45', '45garten.jpg', '🟢 Frei', 'ca. 450 m²', 'vorhanden', 'vorhanden', 'vorhanden', 'sofort')">
+        <img src="45garten.jpg" alt="Garten Nr. 45">
+        <h3>Garten Nr. 45</h3>
+        <p>🟢 Frei</p>
+        <p class="short-facts">ca. 450 m² · Wasser & Strom</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 54', '54garten.jpg', '🟢 Frei', 'ca. 450 m²', 'vorhanden', 'vorhanden', 'vorhanden', 'sofort')">
+        <img src="54garten.jpg" alt="Garten Nr. 54">
+        <h3>Garten Nr. 54</h3>
+        <p>🟢 Frei</p>
+        <p class="short-facts">ca. 450 m² · Wasser & Strom</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 74', '74garten.jpg', '🟢 Frei', 'ca. 450 m²', 'vorhanden', 'vorhanden', 'vorhanden', 'sofort')">
+        <img src="74garten.jpg" alt="Garten Nr. 74">
+        <h3>Garten Nr. 74</h3>
+        <p>🟢 Frei</p>
+        <p class="short-facts">ca. 450 m² · Wasser & Strom</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 92', '92garten.jpg', '🟡 Frei ab Oktober 2026', 'ca. 450 m²', 'vorhanden', 'vorhanden', 'vorhanden', 'Frei ab Oktober 2026')">
+        <img src="92garten.jpg" alt="Garten Nr. 92">
+        <h3>Garten Nr. 92</h3>
+        <p>🟡 Frei ab Oktober 2026</p>
+        <p class="short-facts">ca. 450 m² · Wasser & Strom</p>
+      </div>
+
+      <div class="polaroid-card" onclick="openGardenModal('Garten Nr. 95', '95garten.jpg', '🟢 Frei', 'ca. 450 m²', 'vorhanden', 'vorhanden', 'vorhanden', 'sofort')">
+        <img src="95garten.jpg" alt="Garten Nr. 95">
+        <h3>Garten Nr. 95</h3>
+        <p>🟢 Frei</p>
+        <p class="short-facts">ca. 450 m² · Wasser & Strom</p>
+
+        <a href="anschrieben.html">Interesse?</a>
+      </div>
+
+    </section>
+  </main>
+</div>
+
+<div id="gardenModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeGardenModal()">&times;</span>
+
+    <img id="modalImage" src="" alt="Gartenbild">
+
+    <h2 id="modalTitle"></h2>
+
+    <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+    <p><strong>Größe:</strong> <span id="modalSize"></span></p>
+    <p><strong>Laube:</strong> <span id="modalLaube"></span></p>
+    <p><strong>Wasser:</strong> <span id="modalWasser"></span></p>
+    <p><strong>Strom:</strong> <span id="modalStrom"></span></p>
+    <p><strong>Frei ab:</strong> <span id="modalFrei"></span></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p><strong>Gartensparte Obersprucke e. V.</strong></p>
+    <p>Natur • Gemeinschaft • Erholung</p>
+    <p>© 2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wissenswertes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">🌻</div>
+  <div class="title">
+    <h1>Wissenswertes</h1>
+    <p>Tipps und Informationen rund um den Garten</p>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+                <a href="index.html">Startseite</a>
+                <a href="aktuelles.html">Aktuelles</a>
+                <a href="freie-gaerten.html">Freie Gärten</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="dokumente.html">Dokumente</a>
+                <a href="hinweise.html">Hinweise</a>
+                <a href="wissenswertes.html">Wissenswertes</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+  </aside>
+
+  <main class="content">
+    <section class="welcome">
+      <h2>Wissenswertes</h2>
+      <p>
+       Hier finden Sie hilfreiche Informationen zu Obst, Gemüse, Kräutern und anderen Gartenpflanzen.
+      </p>
+    </section>
+  
+  <section class="search-filter-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Pflanze suchen..."
+        class="search-bar">
+    
+    <div class="filter-buttons">
+        <button>Alle</button>
+        <button>Obst</button>
+        <button>Gemüse</button>
+        <button>Kräuter</button>
+        <button>Frühling</button>
+        <button>Sommer</button>
+        <button>Herbst</button>
+        <button>Winter</button>
+    </div>
+  </section>
+
+  <section class="plant-grid">
+    <div class="plant-card" onclick="openPlantModal()">
+      <img src="apfelbaum.jpg" alt="Apfelbaum">
+      <h3>Apfelbaum</h3>
+      <p>Sonne/Halbschatten • Ernte im Herbst</p>
+    </div>
+  </section>
+
+  <div id="plantModal" class="plant-modal">
+    <div class="plant-modal-content">
+      <span class="plant-close" onclick="closePlantModal()">&times;</span>
+      <div class="plant-modal-left">
+        <img src="apfelbaum.jpg" alt="Apfelbaum" class="plant-main-image">
+
+        <div class="plant-thumbs">
+          <img src="apfelbaum.jpg" alt="Apfelbaum">
+          <img src="apfelblüte.jpg" alt="Apfelblüte">
+          <img src="apfel.jpg" alt="Apfel">
+        </div>
+      </div>
+
+      <div class="plant-modal-right">
+        <h2>Apfelbaum</h2>
+        <p class="latin-name">Malus domestica</p>
+
+        <p><strong>Kateogrie:</strong>Obst</p>
+        <p><strong>Jahreszeit:</strong>Herbst</p>
+        <p><strong>Standort:</strong>Sonnig bis halbschattig</p>
+        <p><strong>Pflanzzeit:</strong>Herbst oder Frühjahr</p>
+        <p><strong>Pflege:</strong>Regelmäßig schneiden und bei Trockenheit gießen</p>
+        <p><strong>Ernte:</strong>August bis Oktober</p>
+        <p><strong>Verwendung:</strong>Apfelmus, Kuchen, Saft oder Kompott</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <p><strong>Gartensparte Obersprucke e. V.</strong></p>
+    <p>Natur • Gemeinschaft • Erholung</p>
+    <p>© 2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
