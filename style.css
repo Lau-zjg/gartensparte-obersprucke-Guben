@@ -715,3 +715,61 @@ body {
 .impressum a:hover {
   opacity: 0.7;
 }
+
+/* =========================
+   GARTEN-BILDERGALERIE
+   ========================= */
+
+.modal-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modal-image-container img {
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+.gallery-arrow:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.gallery-prev {
+  left: 10px;
+}
+
+.gallery-next {
+  right: 10px;
+}
+
+.modal-counter {
+  text-align: center;
+  margin: 5px 0 15px;
+  font-size: 14px;
+  opacity: 0.7;
+}
