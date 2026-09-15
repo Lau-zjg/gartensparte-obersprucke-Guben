@@ -98,7 +98,46 @@
 
 <div id="gardenModal" class="modal">
   <div class="modal-content">
+    <div id="gardenModal" class="modal">
+  <div class="modal-content">
+
     <span class="close" onclick="closeGardenModal()">&times;</span>
+
+    <div class="modal-image-container">
+
+      <button
+        id="gardenPrev"
+        class="gallery-arrow gallery-prev"
+        onclick="changeGardenImage(-1)"
+        aria-label="Vorheriges Bild">
+        &#10094;
+      </button>
+
+      <img id="modalImage" src="" alt="Gartenbild">
+
+      <button
+        id="gardenNext"
+        class="gallery-arrow gallery-next"
+        onclick="changeGardenImage(1)"
+        aria-label="Nächstes Bild">
+        &#10095;
+      </button>
+
+    </div>
+
+    <p id="modalCounter" class="modal-counter"></p>
+
+    <h2 id="modalTitle"></h2>
+
+    <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+    <p><strong>Größe:</strong> <span id="modalSize"></span></p>
+    <p><strong>Laube:</strong> <span id="modalLaube"></span></p>
+    <p><strong>Wasser:</strong> <span id="modalWasser"></span></p>
+    <p><strong>Strom:</strong> <span id="modalStrom"></span></p>
+    <p><strong>Frei ab:</strong> <span id="modalFrei"></span></p>
+
+  </div>
+</div>
 
     <img id="modalImage" src="" alt="Gartenbild">
 
