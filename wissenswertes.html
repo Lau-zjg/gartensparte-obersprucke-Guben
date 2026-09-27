@@ -2,122 +2,102 @@
 <html lang="de">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Wissenswertes</title>
+  <title>Wissenswertes – Gartensparte Obersprucke e. V.</title>
 
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     HEADER
-     ========================= -->
+  <!-- =====================================================
+       SEITENKOPF
+       ===================================================== -->
 
-<header class="header">
+  <header class="header">
 
-  <div class="logo">
-    🌻
-  </div>
+    <div class="header-content">
 
-  <div class="title">
+      <h1>🌱 Wissenswertes</h1>
 
-    <h1>Wissenswertes</h1>
+      <p>
+        Wissenswertes rund um Pflanzen, Gemüse, Obst und Garten
+      </p>
 
-    <p>
-      Tipps und Informationen rund um den Garten
-    </p>
+    </div>
 
-  </div>
-
-</header>
+  </header>
 
 
 
-<!-- =========================
-     LAYOUT
-     ========================= -->
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
 
-<div class="layout">
+  <nav class="navbar">
 
+    <a href="index.html">Startseite</a>
 
-  <!-- =========================
-       SIDEBAR
-       ========================= -->
+    <a href="aktuelles.html">Aktuelles</a>
 
-  <aside class="sidebar">
+    <a href="freie-gaerten.html">Freie Gärten</a>
 
-    <a href="index.html">
-      Startseite
-    </a>
+    <a href="galerie.html">Galerie</a>
 
-    <a href="aktuelles.html">
-      Aktuelles
-    </a>
+    <a href="dokumente.html">Dokumente</a>
 
-    <a href="freie-gaerten.html">
-      Freie Gärten
-    </a>
+    <a href="hinweise.html">Hinweise</a>
 
-    <a href="galerie.html">
-      Galerie
-    </a>
-
-    <a href="dokumente.html">
-      Dokumente
-    </a>
-
-    <a href="hinweise.html">
-      Hinweise
-    </a>
-
-    <a href="wissenswertes.html">
+    <a href="wissenswertes.html" class="active">
       Wissenswertes
     </a>
 
-    <a href="kontakt.html">
-      Kontakt
-    </a>
+    <a href="kontakt.html">Kontakt</a>
 
-    <a href="impressum.html">
-      Impressum
-    </a>
-
-  </aside>
+  </nav>
 
 
 
-  <!-- =========================
+  <!-- =====================================================
        HAUPTINHALT
-       ========================= -->
+       ===================================================== -->
 
   <main class="content">
 
 
     <!-- EINLEITUNG -->
 
-    <section class="welcome">
+    <section class="intro-section">
 
-      <h2>
-        Wissenswertes
-      </h2>
+      <h2>🌿 Pflanzen &amp; Gewächse</h2>
 
       <p>
-        Hier finden Sie hilfreiche Informationen zu Obst,
-        Gemüse, Kräutern und anderen Gartenpflanzen.
+        In unserem Garten wachsen viele verschiedene Pflanzen,
+        Obst- und Gemüsesorten. Hier findest du interessante
+        Informationen zu verschiedenen Gewächsen und erfährst,
+        wo sie am besten wachsen, wann sie gepflanzt und geerntet
+        werden und wie sie verwendet werden können.
+      </p>
+
+      <p>
+        Klicke einfach auf eine Pflanze, um weitere Informationen
+        und mehrere Bilder zu sehen.
       </p>
 
     </section>
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          SUCHE & FILTER
-         ========================= -->
+         ===================================================== -->
 
     <section class="search-filter-box">
 
@@ -131,36 +111,36 @@
 
       <div class="filter-buttons">
 
-        <button>
+        <button type="button" data-filter="Alle">
           Alle
         </button>
 
-        <button>
-          Obst
+        <button type="button" data-filter="Obst">
+          🍎 Obst
         </button>
 
-        <button>
-          Gemüse
+        <button type="button" data-filter="Gemüse">
+          🥕 Gemüse
         </button>
 
-        <button>
-          Kräuter
+        <button type="button" data-filter="Kräuter">
+          🌿 Kräuter
         </button>
 
-        <button>
-          Frühling
+        <button type="button" data-filter="Frühling">
+          🌸 Frühling
         </button>
 
-        <button>
-          Sommer
+        <button type="button" data-filter="Sommer">
+          ☀️ Sommer
         </button>
 
-        <button>
-          Herbst
+        <button type="button" data-filter="Herbst">
+          🍂 Herbst
         </button>
 
-        <button>
-          Winter
+        <button type="button" data-filter="Winter">
+          ❄️ Winter
         </button>
 
       </div>
@@ -169,589 +149,765 @@
 
 
 
-    <!-- =========================
+    <!-- =====================================================
          PFLANZEN
-         ========================= -->
+         ===================================================== -->
 
-    <section class="plant-grid">
+    <section class="plants-section">
 
 
-      <!-- =====================
-           APFELBAUM
-           ===================== -->
+      <div class="plant-grid" id="plantGrid">
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Apfelbaum')"
-      >
 
-        <img
-          src="apfelbaum.jpg"
-          alt="Apfelbaum"
+        <!-- =================================================
+             APFELBAUM
+             ================================================= -->
+
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Frühling Herbst"
+          onclick="openPlantModal('Apfelbaum')"
         >
 
-        <h3>
-          Apfelbaum
-        </h3>
+          <img
+            src="apfelbaum.jpg"
+            alt="Apfelbaum"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍎 Apfelbaum</h3>
+
+            <p>
+              <strong>Malus domestica</strong>
+            </p>
+
+            <p>
+              Obst • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           KÜRBIS
-           ===================== -->
+        <!-- =================================================
+             KÜRBIS
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Kürbis')"
-      >
-
-        <img
-          src="kürbis.jpg"
-          alt="Kürbis"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Sommer Herbst"
+          onclick="openPlantModal('Kürbis')"
         >
 
-        <h3>
-          Kürbis
-        </h3>
+          <img
+            src="kürbis.jpg"
+            alt="Kürbis"
+          >
 
-        <p>
-          Sonne • Ernte im Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🎃 Kürbis</h3>
+
+            <p>
+              <strong>Cucurbita</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonniger Standort
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           ERDBEEREN
-           ===================== -->
+        <!-- =================================================
+             ERDBEEREN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Erdbeeren')"
-      >
-
-        <img
-          src="erdbeeren.jpg"
-          alt="Erdbeeren"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Frühling Sommer"
+          onclick="openPlantModal('Erdbeeren')"
         >
 
-        <h3>
-          Erdbeeren
-        </h3>
+          <img
+            src="erdbeeren.jpg"
+            alt="Erdbeeren"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍓 Erdbeeren</h3>
+
+            <p>
+              <strong>Fragaria × ananassa</strong>
+            </p>
+
+            <p>
+              Obst • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           KARTOFFELN
-           ===================== -->
+        <!-- =================================================
+             KARTOFFELN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Kartoffeln')"
-      >
-
-        <img
-          src="kartoffeln.jpg"
-          alt="Kartoffeln"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Frühling Sommer Herbst"
+          onclick="openPlantModal('Kartoffeln')"
         >
 
-        <h3>
-          Kartoffeln
-        </h3>
+          <img
+            src="kartoffeln.jpg"
+            alt="Kartoffeln"
+          >
 
-        <p>
-          Sonne • Ernte im Sommer/Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🥔 Kartoffeln</h3>
+
+            <p>
+              <strong>Solanum tuberosum</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonniger Standort
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           TOMATEN
-           ===================== -->
+        <!-- =================================================
+             TOMATEN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Tomaten')"
-      >
-
-        <img
-          src="tomaten.jpg"
-          alt="Tomaten"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Sommer Herbst"
+          onclick="openPlantModal('Tomaten')"
         >
 
-        <h3>
-          Tomaten
-        </h3>
+          <img
+            src="tomaten.jpg"
+            alt="Tomaten"
+          >
 
-        <p>
-          Sonne • Ernte im Sommer/Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍅 Tomaten</h3>
+
+            <p>
+              <strong>Solanum lycopersicum</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonnig und warm
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           MÖHREN
-           ===================== -->
+        <!-- =================================================
+             MÖHREN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Möhren')"
-      >
-
-        <img
-          src="moehren.jpg"
-          alt="Möhren"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Frühling Sommer Herbst"
+          onclick="openPlantModal('Möhren')"
         >
 
-        <h3>
-          Möhren
-        </h3>
+          <img
+            src="moehren.jpg"
+            alt="Möhren"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Sommer/Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🥕 Möhren</h3>
+
+            <p>
+              <strong>Daucus carota</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           PAPRIKA
-           ===================== -->
+        <!-- =================================================
+             PAPRIKA
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Paprika')"
-      >
-
-        <img
-          src="paprika.jpg"
-          alt="Paprika"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Sommer Herbst"
+          onclick="openPlantModal('Paprika')"
         >
 
-        <h3>
-          Paprika
-        </h3>
+          <img
+            src="paprika.jpg"
+            alt="Paprika"
+          >
 
-        <p>
-          Sonne • Ernte im Sommer/Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🫑 Paprika</h3>
+
+            <p>
+              <strong>Capsicum annuum</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonnig und warm
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           ZWIEBELN
-           ===================== -->
+        <!-- =================================================
+             ZWIEBELN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Zwiebeln')"
-      >
-
-        <img
-          src="zwiebeln.jpg"
-          alt="Zwiebeln"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Frühling Sommer Herbst"
+          onclick="openPlantModal('Zwiebeln')"
         >
 
-        <h3>
-          Zwiebeln
-        </h3>
+          <img
+            src="zwiebeln.jpg"
+            alt="Zwiebeln"
+          >
 
-        <p>
-          Sonne • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🧅 Zwiebeln</h3>
+
+            <p>
+              <strong>Allium cepa</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonniger Standort
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           BROKKOLI
-           ===================== -->
+        <!-- =================================================
+             BROKKOLI
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Brokkoli')"
-      >
-
-        <img
-          src="brokkoli.jpg"
-          alt="Brokkoli"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Frühling Sommer Herbst"
+          onclick="openPlantModal('Brokkoli')"
         >
 
-        <h3>
-          Brokkoli
-        </h3>
+          <img
+            src="brokkoli.jpg"
+            alt="Brokkoli"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Sommer/Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🥦 Brokkoli</h3>
+
+            <p>
+              <strong>Brassica oleracea var. italica</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           ZUCCHINI
-           ===================== -->
+        <!-- =================================================
+             ZUCCHINI
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Zucchini')"
-      >
-
-        <img
-          src="zucchini.jpg"
-          alt="Zucchini"
+        <div
+          class="plant-card"
+          data-category="Gemüse"
+          data-season="Sommer Herbst"
+          onclick="openPlantModal('Zucchini')"
         >
 
-        <h3>
-          Zucchini
-        </h3>
+          <img
+            src="zucchini.jpg"
+            alt="Zucchini"
+          >
 
-        <p>
-          Sonne • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🥒 Zucchini</h3>
+
+            <p>
+              <strong>Cucurbita pepo</strong>
+            </p>
+
+            <p>
+              Gemüse • Sonniger Standort
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           HEIDELBEEREN
-           ===================== -->
+        <!-- =================================================
+             HEIDELBEEREN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Heidelbeeren')"
-      >
-
-        <img
-          src="heidelbeeren.jpg"
-          alt="Heidelbeeren"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Frühling Sommer"
+          onclick="openPlantModal('Heidelbeeren')"
         >
 
-        <h3>
-          Heidelbeeren
-        </h3>
+          <img
+            src="heidelbeeren.jpg"
+            alt="Heidelbeeren"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🫐 Heidelbeeren</h3>
+
+            <p>
+              <strong>Vaccinium corymbosum</strong>
+            </p>
+
+            <p>
+              Obst • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           JOHANNISBEEREN
-           ===================== -->
+        <!-- =================================================
+             JOHANNISBEEREN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Johannisbeeren')"
-      >
-
-        <img
-          src="johannisbeeren.jpg"
-          alt="Johannisbeeren"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Frühling Sommer"
+          onclick="openPlantModal('Johannisbeeren')"
         >
 
-        <h3>
-          Johannisbeeren
-        </h3>
+          <img
+            src="johannisbeeren.jpg"
+            alt="Johannisbeeren"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍒 Johannisbeeren</h3>
+
+            <p>
+              <strong>Ribes</strong>
+            </p>
+
+            <p>
+              Obst • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           HIMBEEREN
-           ===================== -->
+        <!-- =================================================
+             HIMBEEREN
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Himbeeren')"
-      >
-
-        <img
-          src="himbeeren.jpg"
-          alt="Himbeeren"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Sommer Herbst"
+          onclick="openPlantModal('Himbeeren')"
         >
 
-        <h3>
-          Himbeeren
-        </h3>
+          <img
+            src="himbeeren.jpg"
+            alt="Himbeeren"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍓 Himbeeren</h3>
+
+            <p>
+              <strong>Rubus idaeus</strong>
+            </p>
+
+            <p>
+              Obst • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           BIRNBAUM
-           ===================== -->
+        <!-- =================================================
+             BIRNBAUM
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Birnbaum')"
-      >
-
-        <img
-          src="birnbaum.jpg"
-          alt="Birnbaum"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Frühling Sommer Herbst"
+          onclick="openPlantModal('Birnbaum')"
         >
 
-        <h3>
-          Birnbaum
-        </h3>
+          <img
+            src="birnbaum.jpg"
+            alt="Birnbaum"
+          >
 
-        <p>
-          Sonne/Halbschatten • Ernte im Herbst
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍐 Birnbaum</h3>
+
+            <p>
+              <strong>Pyrus communis</strong>
+            </p>
+
+            <p>
+              Obst • Sonne / Halbschatten
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           KIRSCHBAUM
-           ===================== -->
+        <!-- =================================================
+             KIRSCHBAUM
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Kirschbaum')"
-      >
-
-        <img
-          src="kirschbaum.jpg"
-          alt="Kirschbaum"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Frühling Sommer"
+          onclick="openPlantModal('Kirschbaum')"
         >
 
-        <h3>
-          Kirschbaum
-        </h3>
+          <img
+            src="kirschbaum.jpg"
+            alt="Kirschbaum"
+          >
 
-        <p>
-          Sonne • Ernte im Sommer
-        </p>
+          <div class="plant-card-content">
 
-      </div>
+            <h3>🍒 Kirschbaum</h3>
+
+            <p>
+              <strong>Prunus avium</strong>
+            </p>
+
+            <p>
+              Obst • Sonniger Standort
+            </p>
+
+          </div>
+
+        </div>
 
 
 
-      <!-- =====================
-           WEINREBE
-           ===================== -->
+        <!-- =================================================
+             WEINREBE
+             ================================================= -->
 
-      <div
-        class="plant-card"
-        onclick="openPlantModal('Weinrebe')"
-      >
-
-        <img
-          src="weinrebe.jpg"
-          alt="Weinrebe"
+        <div
+          class="plant-card"
+          data-category="Obst"
+          data-season="Sommer Herbst"
+          onclick="openPlantModal('Weinrebe')"
         >
 
-        <h3>
-          Weinrebe
-        </h3>
+          <img
+            src="weinrebe.jpg"
+            alt="Weinrebe"
+          >
 
-        <p>
-          Sonne • Ernte im Spätsommer/Herbst
-        </p>
+          <div class="plant-card-content">
+
+            <h3>🍇 Weinrebe</h3>
+
+            <p>
+              <strong>Vitis vinifera</strong>
+            </p>
+
+            <p>
+              Obst • Sonnig und warm
+            </p>
+
+          </div>
+
+        </div>
+
 
       </div>
-
 
     </section>
+
 
   </main>
 
-</div>
 
 
+  <!-- =====================================================
+       PFLANZEN-MODAL
+       ===================================================== -->
 
-<!-- ==================================================
-     PFLANZEN-MODAL
-     ================================================== -->
+  <div
+    id="plantModal"
+    class="plant-modal"
+  >
 
-<div
-  id="plantModal"
-  class="plant-modal"
->
-
-
-  <div class="plant-modal-content">
+    <div class="plant-modal-content">
 
 
-    <!-- SCHLIESSEN -->
+      <!-- SCHLIESSEN -->
 
-    <span
-      class="plant-close"
-      onclick="closePlantModal()"
-    >
-      &times;
-    </span>
-
-
-
-    <!-- =========================
-         LINKE SEITE – BILDER
-         ========================= -->
-
-    <div class="plant-modal-left">
-
-
-      <img
-        id="plantMainImage"
-        src=""
-        alt="Pflanze"
-        class="plant-main-image"
+      <span
+        class="plant-close"
+        onclick="closePlantModal()"
       >
+        &times;
+      </span>
 
 
-      <div
-        id="plantThumbs"
-        class="plant-thumbs"
-      >
+
+      <!-- =================================================
+           LINKER BEREICH – BILDER
+           ================================================= -->
+
+      <div class="plant-modal-left">
+
+
+        <img
+          id="plantMainImage"
+          src=""
+          alt="Pflanze"
+          class="plant-main-image"
+        >
+
+
+        <!--
+          Hier werden die drei Vorschaubilder
+          automatisch durch JavaScript eingefügt.
+        -->
+
+        <div
+          id="plantThumbs"
+          class="plant-thumbs"
+        ></div>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           RECHTER BEREICH – INFORMATIONEN
+           ================================================= -->
+
+      <div class="plant-modal-right">
+
+
+        <h2 id="plantTitle"></h2>
+
+
+        <p
+          id="plantLatin"
+          class="latin-name"
+        ></p>
+
+
+
+        <div class="plant-info">
+
+
+          <p>
+
+            <strong>
+              Kategorie:
+            </strong>
+
+            <span id="plantKategorie"></span>
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Jahreszeit:
+            </strong>
+
+            <span id="plantJahreszeit"></span>
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Standort:
+            </strong>
+
+            <span id="plantStandort"></span>
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Pflanzzeit:
+            </strong>
+
+            <span id="plantPflanzzeit"></span>
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Pflege:
+            </strong>
+
+            <span id="plantPflege"></span>
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Ernte:
+            </strong>
+
+            <span id="plantErnte"></span>
+
+          </p>
+
+
+          <p>
+
+            <strong>
+              Verwendung:
+            </strong>
+
+            <span id="plantVerwendung"></span>
+
+          </p>
+
+
+        </div>
+
+
       </div>
 
 
     </div>
 
+  </div>
 
 
-    <!-- =========================
-         RECHTE SEITE – INFOS
-         ========================= -->
 
-    <div class="plant-modal-right">
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
+  <footer class="footer">
 
-      <h2
-        id="plantTitle"
-      >
-      </h2>
-
-
-      <p
-        id="plantLatin"
-        class="latin-name"
-      >
-      </p>
-
-
+    <div class="footer-content">
 
       <p>
-        <strong>Kategorie:</strong>
-        <span id="plantKategorie"></span>
+        <strong>
+          Gartensparte Obersprucke e. V.
+        </strong>
       </p>
-
 
       <p>
-        <strong>Jahreszeit:</strong>
-        <span id="plantJahreszeit"></span>
+        Natur • Gemeinschaft • Erholung
       </p>
-
 
       <p>
-        <strong>Standort:</strong>
-        <span id="plantStandort"></span>
+        © 2026
       </p>
-
-
-      <p>
-        <strong>Pflanzzeit:</strong>
-        <span id="plantPflanzzeit"></span>
-      </p>
-
-
-      <p>
-        <strong>Pflege:</strong>
-        <span id="plantPflege"></span>
-      </p>
-
-
-      <p>
-        <strong>Ernte:</strong>
-        <span id="plantErnte"></span>
-      </p>
-
-
-      <p>
-        <strong>Verwendung:</strong>
-        <span id="plantVerwendung"></span>
-      </p>
-
 
     </div>
 
-  </div>
-
-</div>
+  </footer>
 
 
 
-<!-- =========================
-     FOOTER
-     ========================= -->
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
 
-<footer class="footer">
-
-  <div class="footer-content">
-
-    <p>
-      <strong>
-        Gartensparte Obersprucke e. V.
-      </strong>
-    </p>
-
-    <p>
-      Natur • Gemeinschaft • Erholung
-    </p>
-
-    <p>
-      © 2026
-    </p>
-
-  </div>
-
-</footer>
-
-
-
-<!-- JAVASCRIPT -->
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 
 </body>
+
 </html>
